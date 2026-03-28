@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bunker Life | Terminal OS</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="loader">
+        <div class="loader-content">
+            <p id="load-text">> INITIALIZING SYSTEM...</p>
+            <div class="load-bar-container">
+                <div id="load-bar"></div>
+            </div>
+            <p class="loader-sub">BUNKER_LIFE_OS v0.1 | SOURCE: FORGE_1.12.2</p>
+        </div>
+    </div>
+
+    <div id="main-content" style="display: none;">
+        <header>
+            <div class="logo">BUNKER_LIFE</div>
+            <nav>
+                <a href="#" onclick="showPage('home')" id="nav-home">ГОЛОВНА</a>
+                <a href="#" onclick="showPage('about')" id="nav-about">ПРО СЕРВЕР</a>
+                <a href="#" onclick="showPage('players')" id="nav-players">ГРАВЦІ</a>
+                <a href="#" onclick="showPage('news')" id="nav-news">НОВИНИ</a>
+            </nav>
+            <div class="lang-switcher">
+                <button class="lang-btn active" onclick="setLang('ua')">UA</button>
+                <button class="lang-btn" onclick="setLang('ru')">RU</button>
+            </div>
+        </header>
+
+        <div class="container">
+            
+            <section id="home" class="page-section active">
+                <div class="hero">
+                    <div class="status-badge" id="status-text">СИСТЕМА: ОЧІКУВАННЯ...</div>
+                    <h1 id="hero-title">BUNKER LIFE</h1>
+                    <p id="hero-desc">Forge 1.12.2. Твій новий дім — під землею.</p>
+                    <a href="https://discord.gg/yourlink" class="btn-discord" id="btn-text">УВІЙТИ В DISCORD</a>
+                </div>
+                
+                <div class="roadmap">
+                    <h2 id="rm-title">ЛОГ РОЗРОБКИ <span class="blink">_</span></h2>
+                    <ul class="progress-list" id="rm-list"></ul>
+                </div>
+            </section>
+
+            <section id="about" class="page-section">
+                <h2 class="section-title">>> ТЕХНІЧНИЙ ЗВІТ / ABOUT</h2>
+                <div class="features">
+                    <div class="card">
+                        <h3 id="f1-t">☢️ РАДІАЦІЯ</h3>
+                        <p id="f1-d">Система виживання на поверхні потребує спецобладнання.</p>
+                    </div>
+                    <div class="card">
+                        <h3 id="f2-t">⚙️ МОДИ</h3>
+                        <p id="f2-d">Збірка базується на Forge 1.12.2 з акцентом на індустрію.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="players" class="page-section">
+                <h2 class="section-title">>> БАЗА ДАНИХ МЕШКАНЦІВ / PLAYERS</h2>
+                <div class="player-list">
+                    <div class="card" style="border-left-color: var(--main-green);">
+                        <h3>Void Team</h3>
+                        <p>Статус: <span style="color: var(--main-green);">Адміністрація</span></p>
+                    </div>
+                    <div class="card">
+                        <h3 id="player-status-title">Статус доступу</h3>
+                        <p id="player-status-desc">Реєстрація нових мешканців закрита до завершення тестування.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="news" class="page-section">
+                <h2 class="section-title">>> АРХІВ НОВИН / NEWS</h2>
+                <div id="news-container">
+                    </div>
+            </section>
+
+        </div>
+
+        <footer id="footer-text"></footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
